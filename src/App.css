@@ -36,3 +36,174 @@
     transform: rotate(360deg);
   }
 }
+
+*{
+  box-sizing:border-box ;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display:flex;
+  flex-direction: column;
+}
+
+.head{
+  position:fixed;
+  display:flex;
+  width:100%;
+  height: 50px;
+  z-index: 9;
+  background-color: green;
+}
+
+.nav{
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  border:solid blue 1px;
+}
+
+.menu{
+  display:flex;
+  justify-self: center;
+  width: 100%;
+  height: 80%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border:solid pink 1.5px;
+  overflow: hidden;
+}
+
+
+
+.menu-item{
+  display:flex;
+  border: solid red 0.5px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-link{
+  text-decoration: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  border:solid black 0.5px;
+  width: 100%;
+  text-align: center;
+  justify-items: center;
+  white-space: nowrap;
+}
+
+.timer{
+  display:flex;
+  position:absolute;
+  /* border:solid black 1px; */
+  width: 16%;
+  background-color: orange;
+  color:blue;
+  margin-left: 83.9%;
+  flex-direction: column;
+  margin-top: 3.1%;
+}
+
+.home{
+  /* margin-top: 3.1%; */
+  padding-top: 50px;
+  background-color: brown;
+  width: 100%;
+  height: 1000px;
+
+}
+
+.usuariosmain{
+  padding-top: 50px;
+  width:100%;
+  height: 1000px;
+  background-color: grey;
+}
+
+.usuariosdisplay{
+  margin-top: 150px;
+  width:100%;
+  height: 700px;
+  background-color: violet;
+  display:flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.usuariox{
+  width:350px;
+  border:solid 1px black;
+  height: 300px;
+  display:flex;
+}
+
+.fotousuario{
+  width:45%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.usuarioperfil{
+  padding-top: 50px;
+  background-color: pink;
+  width: 100%;
+  height: 1000px;
+  display:flex;
+  flex-direction: column;
+}
+
+.fotodelusuario{
+  margin-top: 5%;
+  width: 30%;
+  height: 50%;
+  border:black solid 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Teammain{
+  padding-top: 60px;
+  width:100%;
+  background-color: grey;
+}
+
+.displayteam{
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  width: 90%;
+  border: red 1px solid;
+}
+
+.logoteam{
+  widows: 25%;
+  height: 80px;
+}
+
+.displayplayers{
+  border:black solid 1px;
+  width: 90%;
+}
+
+.displayplayer{
+  border:blue solid 1px;
+  width:30%
+}
+
+.loading{
+  margin-top:60px
+}
