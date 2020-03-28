@@ -29,10 +29,7 @@ class Jugadores extends Component {
 
             const url= 'http://api.football-data.org/v2/teams/81'
 
-            // const mipeticion= new Request(miinit,url)
-
-            fetch(url,miinit)
-            .then(response=>{console.log(response); return response.json()})
+            fetch(url,miinit).then(response=>{console.log(response); return response.json()})
             .then(response=>{console.log(response);this.setState({plantilla:response.squad});this.setState({information:response})})
             
     }

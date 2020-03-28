@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import CargandoTalleres from '../Organisms/logintalleres'
 
 const withLoader = (propValue,WrappedComponent) =>{
 
@@ -10,7 +11,7 @@ const withLoader = (propValue,WrappedComponent) =>{
 
         render(){
             return  this.props[propValue].length === 0
-            ? <h1 className="loading">Loading ....</h1>
+            ? <CargandoTalleres/>
             : <WrappedComponent  {...this.props} />
         }
 

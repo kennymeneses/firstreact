@@ -1,27 +1,23 @@
 import React from 'react';
 import '../App.css';
-import Hora from './Molecules/reloj'
-import Index from './pages/home'
-import Misusuarios from './pages/users'
-import Usuario from './Molecules/user'
-import Jugadores from './pages/jugadores'
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
-import Banner from './Organisms/header'
+import AppRoutes from './AppRoutes';
+import  { Provider }  from "react-redux"
+import store from '../redux/store'
+import { getTallerList } from '../redux/actionCreators'
+import { PersistGate } from 'redux-persist/integration/react'
+import {createStore} from 'redux'
 
-const App = () =>(
 
-    <Router>
-        <Banner/>
-          <Switch>
-            <Route path ="/" exact component={Index} />
-            <Route path ="/usuarios/:id" component={Usuario}/>
-            <Route path ="/usuarios" component={Misusuarios} />
-            <Route path ="/jugadores" component={Jugadores}/>
-            </Switch>
-        
-    </Router>
 
-  );
+store.dispatch(getTallerList())
 
+const App = () => (
+
+    <Provider store={store}>
+
+        <AppRoutes />
+
+    </Provider>
+  )
 
 export default App;
